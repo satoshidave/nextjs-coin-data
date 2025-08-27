@@ -1,10 +1,16 @@
 "use client";
 import { Input as InputAntd } from "antd";
 
-export default function Input() {
+interface InputProps {
+	onChange: (value: string) => void;
+}
+
+export default function Input({
+	onChange = (value: string) => {},
+}: InputProps) {
 	return (
 		<div>
-			<InputAntd onChange={(e) => console.log(e.target.value)} />
+			<InputAntd onChange={(event) => onChange(event.target.value)} />
 		</div>
 	);
 }

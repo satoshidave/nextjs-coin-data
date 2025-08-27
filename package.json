@@ -6,7 +6,8 @@
 		"dev": "next dev --turbopack",
 		"build": "next build --turbopack",
 		"start": "next start",
-		"lint": "eslint . --ext .ts,.tsx"
+		"prepare": "husky",
+		"lint": "next lint"
 	},
 	"dependencies": {
 		"antd": "^5.27.1",
