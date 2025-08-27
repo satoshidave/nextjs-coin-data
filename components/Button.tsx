@@ -1,9 +1,15 @@
 import { Button as ButtonAntd } from "antd";
 
-export default function Button() {
+interface ButtonProps {
+	onClick?: () => void;
+}
+
+export default function Button({ onClick = () => {} }: ButtonProps) {
 	return (
 		<div>
-			<ButtonAntd type="primary">Button</ButtonAntd>
+			<ButtonAntd onClick={onClick} type="primary">
+				Buscar
+			</ButtonAntd>
 		</div>
 	);
 }
