@@ -5,6 +5,19 @@ import Result from "./Result";
 
 interface FeedbackProps {
 	coinData: {
+		image: {
+			large: string;
+		};
+		name: string;
+		symbol: string;
+		description: {
+			en: string;
+		};
+		market_data: {
+			current_price: {
+				usd: number;
+			};
+		};
 		error?: boolean;
 	};
 	coin: string;
