@@ -7,7 +7,7 @@ interface InputProps {
 }
 
 export default function Input({
-	onChange = (value: string) => {},
+	onChange = () => {},
 	placeholder,
 }: InputProps) {
 	return (
